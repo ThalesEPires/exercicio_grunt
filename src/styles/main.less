@@ -1,0 +1,71 @@
+@backgroundColor: #2ecc71;
+@buttonColor: #063f1e;
+@errorColor: rgb(255, 0, 0);
+@textColor: #fff;
+@buttonHover: #097034;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: @backgroundColor;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form {
+    margin-top: 40px;
+}
+
+input, textarea, button {
+    display:block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+}
+
+button {
+    background-color: @buttonColor;
+    border: none;
+    text-transform: uppercase;
+    color: @textColor;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: @buttonHover;
+}
+
+.success-message {
+    background-color: @backgroundColor;
+    padding: 16px;
+    color: @textColor;
+    display: none;
+}
+
+.error-message {
+    font-size: 12px;
+    padding: 8px;
+    background-color: @errorColor;
+    color: @textColor;
+    margin-bottom: 8px;
+    display: none;
+}
+
+input.error {
+    color: @errorColor;
+    border-color: @errorColor;
+    outline-color: @errorColor;
+}
